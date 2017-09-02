@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[margin=1.0in]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,enumerate,euscript,mathrsfs,listings}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exmp}[thm]{Example}
+
+
+\usepackage{subfiles}
+ 
+\title{COMS 633: \\ Advanced Topics in Computational Randomness \\
+    \large Lecture Notes - Fall 2017}
+\author{Professor: Dr. Jack Lutz \\ Notes by: Alex Scheel}
+\date{ Updated: 08-31-2017 }
+ 
+\begin{document}
+ 
+\maketitle
+ 
+\section{Introduction}
+ 
+\subfile{notes/00-introduction}
+
+\section{Finite-State Gambling}
+
+\subfile{notes/01-finite-state-gambling} 
+ 
+\end{document}
