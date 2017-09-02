@@ -1,7 +1,79 @@
 \documentclass[../main.tex]{subfiles}
- 
+
 \begin{document}
 
-These notes were prepared by Alex Scheel.
- 
+\subsection{Overview}
+These notes were prepared by Alex Scheel; they are not official class notes.
+Unless otherwise noted, the primary source is lectures by Dr. Jack Lutz.
+
+\subsection{Prerequisite Knowledge, Terminology, and Notation}
+
+\begin{itemize}
+    \item An extended real number is an element of the set
+        $[-\infty, \infty] = \R \cup \{ -\infty, \infty \}$.
+    \item An upper bound of a set $E \subseteq \R$ is an extended
+        real number, $u$ such that $(\forall x \in E)$, $x \leq u$.
+    \item A maximum of a set $E \subseteq \R$ is an element $x \in E$ that is
+        an upper bound of $E$.
+    \item It is easy to see that a set has at most one maximum, but maybe none.
+        \begin{itemize}
+            \item $\N$ has none,
+            \item $(0, 1) \subset \R$ has none,
+            \item $[0, 1]$ has one; $1$.
+        \end{itemize}
+    \item A supremum (or least upper bound) of a set $E \subseteq \R$ is an
+        upper bound $u$ of $E$ with the property that, $(\forall v \in E)$,
+        that is an upper bound of $E$, $u \leq v$. A set has at most one supremum.
+        A max, if it exists, is a sup.
+    \item \textbf{Supremum principle}: Every set $E \subseteq \R$ has a supremum.
+    \item We write $sup\ E$ for the supremum of $E$.
+    \item The terms lower bound, minimum, and infimum are analogously defined.
+    \item The notation $\forall^{\infty}$ means ``for all but finitely many''; that is,
+        excluding only a finite number of elements.
+    \item The notation $\exists^{\infty}$ means ``there exist infinitely many''.
+\end{itemize}
+
+Let $f:\N \rightarrow \R$.
+\begin{itemize}
+    \item $f$ converges to a real $\alpha \in \R$ if, $(\forall \epsilon > 0)$,
+        and $(\forall^{\infty} n \in \N)$, then $| f(n) - \alpha | < \epsilon$.
+    \item $f$ converges (or diverges) to $\infty$ if, $(\forall m \in \N)$,
+        and $(\forall^{\infty} n \in \N)$, then $f(n) > m$.
+    \item $f$ converges (or diverges) to $-\infty$ if, $(\forall m \in \N)$,
+        and $(\forall^{\infty} n \in \N)$, then $f(n) < -m$.
+    \item There is at most one $u \in [-\infty, \infty]$ such that $f$ converges
+        to $u$.
+    \item Notation: $\lim\limits_{n \rightarrow \infty} f(n) = u$.
+    \item $f$ is nondecreasing if, $(\forall n \in \N)$, $f(n) \leq f(n+1)$.
+    \item $f$ is strictly increasing if, $(\forall n \in \N)$, $f(n) < f(n+1)$.
+    \item $f$ is nonincreasing if, $(\forall n \in \N)$, $f(n) \geq f(n+1)$.
+    \item $f$ is strictly decreasing if, $(\forall n \in \N)$, $f(n) > f(n+1)$.
+    \item $f$ is monotone if $f$ is nonincreasing or nondecreasing.
+    \item Every monotone function has a limit in $[-\infty, \infty]$.
+\end{itemize}
+
+\begin{defn}
+    Let $f:\N \rightarrow \R$.
+    \begin{enumerate}
+        \item The limit superior of $f$ as $n \rightarrow \infty$ is:
+            \begin{equation*}
+                \limsup\limits_{n \rightarrow \infty} f(n) = \lim\limits_{n \rightarrow \infty} \sup\limits_{m \geq n} f( m )
+            \end{equation*}
+        \item The limit inferior of $f$ as $n \rightarrow \infty$ is:
+            \begin{equation*}
+                \liminf\limits_{n \rightarrow \infty} f(n) = \lim\limits_{n \rightarrow \infty} \inf\limits_{m \geq n} f( m )
+            \end{equation*}
+    \end{enumerate}
+\end{defn}
+
+\textbf{Observations:}
+\begin{enumerate}
+    \item liminf, limsup always exist.
+    \item liminf $\leq$ limsup.
+    \item limit exists $\iff$ $\liminf = \limsup$. Then, $\lim = \liminf = \limsup$.
+    \item $\liminf\limits_{n \rightarrow \infty} f(n) = \infty \iff \lim\limits_{n \rightarrow \infty} f(n) = \infty$
+    \item $\limsup\limits_{n \rightarrow \infty} f(n) = \infty \iff f$ is not
+        bounded above, $\infty$ is the only upper bound of range $f$.
+\end{enumerate}
+
 \end{document}
