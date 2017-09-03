@@ -4,7 +4,9 @@
 
 \usepackage[margin=1.0in]{geometry}
 
-\usepackage{amsmath,amsthm,amssymb,enumerate,euscript,mathrsfs,listings}
+\usepackage{amsmath,amsthm,amssymb,euscript,mathrsfs,listings,amssymb}
+\usepackage[shortlabels]{enumitem}
+
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -20,6 +22,9 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
 \newtheorem{exmp}[thm]{Example}
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
 
 \usepackage{subfiles}
